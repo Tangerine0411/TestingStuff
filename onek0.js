@@ -159,9 +159,7 @@
     variant = parseLocalStorage("variant", "classic");
     kuroNeko = parseLocalStorage("kuroneko", false);
 
-    if (!variants.some((v) => v[0] === variant)) {
-      variant = "classic";
-    }
+    
 
     nekoEl.id = "oneko";
     nekoEl.style.width = "32px";

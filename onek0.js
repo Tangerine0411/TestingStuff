@@ -159,7 +159,9 @@
     variant = parseLocalStorage("variant", "classic");
     kuroNeko = parseLocalStorage("kuroneko", false);
 
-    
+    if (!variants.some((v) => v[0] === variant)) {
+      variant = "classic";
+    }
 
     nekoEl.id = "oneko";
     nekoEl.style.width = "32px";
@@ -401,6 +403,13 @@
     return [getSprite(key, 0), getSprite(key, 1)];
   }
 
+  function setVariant(arr) {
+    console.log(arr);
+
+    variant = arr[0];
+    localStorage.setItem("oneko:variant", `"${variant}"`);
+    nekoEl.style.backgroundImage = `url('https://raw.githubusercontent.com/kyrie25/spicetify-oneko/main/assets/oneko/oneko-${variant}.gif')`;
+  }
 
   // Popup modal to choose variant
   function pickerModal() {
@@ -449,7 +458,8 @@
       div.style.setProperty("--active-x", `${active[0] * 64}px`);
       div.style.setProperty("--active-y", `${active[1] * 64}px`);
 
-      div.onclick = () => 
+      div.onclick = () => {
+        setVariant(variantEnum);
         document.querySelector(".oneko-variant-button-selected")?.classList.remove("oneko-variant-button-selected");
         div.classList.add("oneko-variant-button-selected");
       };

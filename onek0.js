@@ -401,13 +401,6 @@
     return [getSprite(key, 0), getSprite(key, 1)];
   }
 
-  function setVariant(arr) {
-    console.log(arr);
-
-    variant = arr[0];
-    localStorage.setItem("oneko:variant", `"${variant}"`);
-    nekoEl.style.backgroundImage = `url('https://raw.githubusercontent.com/kyrie25/spicetify-oneko/main/assets/oneko/oneko-${variant}.gif')`;
-  }
 
   // Popup modal to choose variant
   function pickerModal() {

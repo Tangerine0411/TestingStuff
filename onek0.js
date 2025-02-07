@@ -449,8 +449,7 @@
       div.style.setProperty("--active-x", `${active[0] * 64}px`);
       div.style.setProperty("--active-y", `${active[1] * 64}px`);
 
-      div.onclick = () => {
-        setVariant(variantEnum);
+      div.onclick = () => 
         document.querySelector(".oneko-variant-button-selected")?.classList.remove("oneko-variant-button-selected");
         div.classList.add("oneko-variant-button-selected");
       };

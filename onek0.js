@@ -264,7 +264,7 @@
 
   function setSprite(name, frame) {
     const sprite = getSprite(name, frame);
-    nekoEl.style.backgroundPosition = `${sprite[0] * 32}px ${sprite[1] * 32}px`;
+    nekoEl.style.backgroundPosition = `${sprite[0] * 16}px ${sprite[1] * 16}px`;
   }
 
   function resetIdleAnimation() {

@@ -164,8 +164,8 @@
     }
 
     nekoEl.id = "oneko";
-    nekoEl.style.width = "16px";
-    nekoEl.style.height = "16px";
+    nekoEl.style.width = "32px";
+    nekoEl.style.height = "32px";
     nekoEl.style.position = "fixed";
     // nekoEl.style.pointerEvents = "none";
     nekoEl.style.backgroundImage = `url('https://raw.githubusercontent.com/kyrie25/spicetify-oneko/main/assets/oneko/oneko-${variant}.gif')`;
